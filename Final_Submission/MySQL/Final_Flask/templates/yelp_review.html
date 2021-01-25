@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{ review_stars }}</title>
+    </head>
+    <body>
+        <h1>{{ review_stars }}</h1>
+        <table>
+            <thead><tr><th>Business Name</th><th>Review_Stars</th></tr></thead>
+            <tbody>
+                {% for row in data: %}
+                <tr>
+					<td>{{ row['business_name'] }}</td>
+					<td>{{ row['review_stars'] }}</td>
+				</tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </body>
+</html>

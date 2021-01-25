@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{ title }}</title>
+    </head>
+    <body>
+        <h1>{{ title }}</h1>
+        <table>
+            <thead><tr><th>Title</th><th>Year</th><th>Length</th></tr></thead>
+            <tbody>
+                {% for row in data: %}
+                <tr><td>{{ row['title'] }}</td><td>{{ row['year'] }}</td><td>{{ row['length'] }}</td></tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{ category_name }}</title>
+    </head>
+    <body>
+        <h1>{{ category_name }}</h1>
+        <table>
+            <thead>
+			<tr>
+				<th>These are review texts from previous customers of this category restaurant that you just searched for</th>
+			</tr>
+			</thead>
+            <tbody>
+                {% for row in data: %}
+                <tr>
+					<td>{{ row['review_text'] }}</td>
+					
+				</tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </body>
+</html>

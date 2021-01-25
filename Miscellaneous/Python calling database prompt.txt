@@ -1,0 +1,8 @@
+q = 'INSERT INTO Star(StarName, StarAge) VALUES ("Tom Cruise", 1820)'
+
+c.execute(q)
+starName = c.lastrowid
+
+
+c.execute('SELECT StarID, StarName FROM Star WHERE name = "Tom Cruise" AND StarAge = "1820")
+results = c.fetchone()[0][1]  // It will return tuple, so we need indexing to get access to the value

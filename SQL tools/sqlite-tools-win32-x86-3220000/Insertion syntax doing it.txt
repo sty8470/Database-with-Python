@@ -1,0 +1,5 @@
+
+
+c.execute('INSERT INTO Star VALUES (?,?)',[x,y])
+c.executescript('my.sql')
+

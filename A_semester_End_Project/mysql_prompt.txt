@@ -1,0 +1,68 @@
+
+On MySQL
+
+>>mysql -u root -p
+
+>>create database YelpDB;
+
+>>drop database YelpDB;
+
+>>quit;
+
+>>use MovieDB;
+
+>>source yelp_database.sql;
+
+>>describe business;
+
+>>python movies.my.py
+
+either
+>>pip install flask
+>> python -m pip install flask
+
+>>cd MyFlaskApp/
+
+// inside MyFlaskApp file create app.py file
+
+dealing with the environmental variable
+<app.py>
+import flask
+app = flask.Flask(__name__)
+
+@app.route('/')
+def index():
+
+	return "
+<html>
+	<head>
+		<title> MY New Skills </title>
+	</head>
+	<body>
+		<h1> Woohoo!</h1>
+		This is the landing page...
+	</body>
+</html>
+
+@app.route('/details')
+def details():
+
+	return "<html><body><h1>welcome</h1></body></html>"
+
+def add_numers(x,y):
+	return x+y
+
+if __name__ == '__main__'
+app.run()
+
+
+>>cd MyFlaskapp/
+>> FLASK_APP = app.py flask run
+
+>> FLASK_APP = app.py flask run
+
+>>
+
+>>telnet google.com 80
+
+>>

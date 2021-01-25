@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+        $.ajax({
+			url: "http://localhost:5000/json/movie/" + $( "#titleq" ).val(),
+			dataType: 'jsonp',
+			success: function( data ) {
+				var items = [];
+				$.each( data['movies'], function( key, val ) {
+				  items.push( "<li>" + val.title + "; " + val.year + "; " + val.length + "</li>" );
+				});
+	 
+				$( "<ul/>", {
+				  "class": "my-new-list",
+				  html: items.join( "" )
+				}).appendTo( "#jsonresult" );
+			}
+		});
+    });
+});
+</script>
+</head>
+<body>
+
+<button>Get Movie JSON</button>
+<input type="text" id="titleq"></input>
+
+<div id="jsonresult"></div>
+
+</body>
+</html>
+

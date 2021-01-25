@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<style>
+        <title style = "color:blue;">{{ business_name }}</title>
+    </head>
+		</style>
+    <body>
+        <h1>{{ business_name }}</h1>
+        <table>
+            <thead>
+				<tr>
+					<th>This was the restaurant name that you were looking for!!!</th> 
+					<th>Categories</th>
+					<th>Review_Stars</th>
+				</tr>
+			</thead>
+            <tbody>
+                {% for row in data: %}
+                <tr>
+					<td>{{ row['business_name'] }}</td>
+					<br>
+					<td>Now aren't you curious about which category of this restaurant is?</td>
+					<br>
+					<td>In addition, now you should start to be curious about its rating! <br> You are not going to eat at the place where you will have food poisoning!</td>
+				</tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </body>
+</html>

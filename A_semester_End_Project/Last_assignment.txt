@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+
+<xsd:schema>
+  <xsd:complexType>
+    <xsd:element name="movies" type="string"/>
+      <xsd:sequence>
+        <xsd:element name="movie" type="string"/>
+          <xsd:element name="title" type="string"/>
+	  <xsd:element name="year" type="integer"/>
+	  <xsd:element name="length" type="integer"/>
+      </xsd:sequence>
+	
+      <xsd:sequence>
+        <xsd:element name="genres" type="string"/>
+	<xsd:element name="genre" type="string"/>
+	<xsd:element name="genre" type="string"/>
+	</xsd:sequence>
+
+			<xsd:element name="stars" type="string"/>
+																<xsd:element name="stars" type="string"/>
+			
+<xsd:complexType>						
+					<xsd:element name="star" type="string"/>
+					<xsd:sequence>
+					<xsd:element name="name" type="string"/>							<xsd:element name="name" type="string"/>
+
+					
+
+				
+			
+		
+			
+
+
+</xsd:schema>

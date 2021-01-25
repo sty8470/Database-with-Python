@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<style>
+        <title>{{ business_name }}</title>
+    </head>
+		</style>
+    <body>
+        <h1>{{ business_name }}</h1>
+        <table>
+            <thead>
+				<tr>
+					<th>This is the address</th> 
+					<th>This is the city</th>
+					<th>This is the state</th>
+					<th>This is the postal_code</th>
+				</tr>
+			</thead>
+            <tbody>
+                {% for row in data: %}
+                <tr>
+					<td>{{ row['address'] }}</td>
+					<td>{{ row['city'] }}</td>
+					<td>{{ row['state'] }}</td>
+					<td>{{ row['postal_code'] }}</td>
+				
+				</tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </body>
+</html>

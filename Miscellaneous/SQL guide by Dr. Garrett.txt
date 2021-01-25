@@ -1,0 +1,22 @@
+package manager -- homebrew (OSX), apt (Ubuntu), RedHat (yum)
+
+pip -- package manager for Python libraries (pypi)
+
+flask -- web framework (including server) written in Python
+
+
+# To log into mysql
+mysql -u root -p 
+
+# To run short commands in mysql without opening mysql
+mysql -u root -p -e "whatever short mysql commands"
+mysql -u root -p -e "create database MovieDB;"
+
+
+# To run flask
+set FLASK_APP=app.py
+flask run
+
+
+# To install something with pip
+pip install flask
