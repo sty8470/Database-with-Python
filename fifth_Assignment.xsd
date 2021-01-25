@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:element name="movies">
+  <xs:complexType>
+    <xs:sequence>
+	  <xs:element name="movie" maxOccurs="unbounded" minOccurs="0">
+  		<xs:complexType>
+  		<xs:sequence>
+		  <xs:element name="title" type="xs:string"/>
+		  <xs:element name="year" type="xs:integer"/>
+		  <xs:element name="length" type="xs:integer"/>
+		  <xs:element name="genres">
+	  		<xs:complexType mixed="true">
+			  <xs:sequence>
+		  		<xs:element name="genre" type="xs:string" maxOccurs="unbounded" minOccurs="0"/>
+			  </xs:sequence>
+	  		</xs:complexType>
+		  </xs:element>	
+		  <xs:element name="studio" type="xs:string"/>
+		  <xs:element name="producer" type="xs:string"/>
+		  <xs:element name="networth" type="xs:decimal"/>
+		  <xs:element name="stars">
+	  		<xs:complexType>
+			  <xs:sequence>
+		  		<xs:element name="star" maxOccurs="unbounded" minOccurs="0">
+				  <xs:complexType>
+			  		<xs:sequence>
+					  <xs:element name="name" type="xs:string"/>
+					  <xs:element name="age" type="xs:integer"/>
+			  		</xs:sequence>
+		    	  </xs:complexType>
+		  	    </xs:element>
+			  </xs:sequence>
+	   		</xs:complexType>
+	        </xs:element>
+		  </xs:sequence>
+  		</xs:complexType>
+	  </xs:element>
+	</xs:sequence>
+  </xs:complexType>
+</xs:element>
+
+</xs:schema>						
